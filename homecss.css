@@ -1,0 +1,182 @@
+*{
+    box-sizing: border-box;
+
+}
+.cont{
+    display: flex;
+}
+
+html, body{
+    overflow-x: hidden;
+    height: 100%;
+
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+
+
+}
+.header{
+    display: flex;
+    background-color:#fff;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 10;
+}
+
+#main{
+    height: 100%;
+    margin-top: 60px;
+    padding: 10px 50px;
+
+}
+
+#sidebarmenu{
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    margin-top: 60px;
+    background-color: #2e86de;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+
+}
+#opensidebarmenu:checked  ~ #sidebarmenu{
+    transform: translateX(0px);
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+.menu li{
+    color: white;
+    border-bottom: 1px solid rgba(256, 256, 256, 0.10);
+
+}
+.menu li a{
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px;
+}
+.sidebaricontoggle{
+    
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    z-index: 20;
+    top: 22px;
+    left: 15px;
+    cursor: pointer;
+
+
+}
+.spinner{
+    height: 3px;
+    background-color: rgb(14, 199, 42);
+    transition: all 0.3s;
+}
+.spinner.middle,
+.spinner.bottom{
+    margin-top: 3px;
+}
+#opensidebarmenu:checked ~ .sidebaricontoggle > .spinner.middle{
+    opacity: 0;
+}
+#opensidebarmenu:checked ~ .sidebaricontoggle > .spinner.top{
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+#opensidebarmenu:checked ~ .sidebaricontoggle > .spinner.bottom{
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+.header>img{
+    height: 50px;
+    width: 60px;
+    opacity: 100%;
+    margin-left: 40px;
+}
+#headtext{
+    text-align: center;
+    margin-top: 9px;
+    margin-left: 100px;
+    font-style: oblique;
+    color: #2e86de;
+}
+#sign,#log{
+    height: 70%;
+    margin: 3px;
+    margin-top: 10px;
+    background-color: rgb(78, 17, 175);
+    border-radius: 8px;
+    
+    
+}
+#sign{
+    
+    margin-left: 100px;
+
+}
+.first{
+    height: 500px;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    color: rgb(10, 160, 50);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border: 1px solid black;
+    background-image:url(https://www.eastbrunswick.org/ImageRepository/Document?documentId=1723);
+}
+.first>h2,
+.first>p,
+.first>input,
+.first>select{
+    font-size: larger;
+    
+    opacity: 10;
+    text-align: center;
+}
+.first>select,
+.first>input{
+    margin-left: 520px;
+    padding: 20px;
+    width: fit-content;
+
+}
+.second{
+    display: flex;
+    height: 400px;
+    width: 100%;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    justify-content: center;
+    color: blue;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+#grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    margin-left: 10px;
+}
+
+
+
+
+
