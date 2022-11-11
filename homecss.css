@@ -23,7 +23,7 @@ body{
     display: flex;
     background-color:#fff;
     width: 100%;
-    height: 60px;
+    height: 70px;
     position: fixed;
     z-index: 10;
 }
@@ -109,7 +109,7 @@ body{
 #headtext{
     text-align: center;
     margin-top: 9px;
-    margin-left: 100px;
+    margin-left: 500px;
     font-style: oblique;
     color: #2e86de;
 }
@@ -117,6 +117,7 @@ body{
     height: 70%;
     margin: 3px;
     margin-top: 10px;
+
     background-color: rgb(78, 17, 175);
     border-radius: 8px;
     
@@ -124,7 +125,7 @@ body{
 }
 #sign{
     
-    margin-left: 100px;
+    margin-left: 450px;
 
 }
 .first{
@@ -175,8 +176,134 @@ body{
     grid-gap: 10px;
     margin-left: 10px;
 }
+.third{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    margin-top:30px ;
+    justify-content: space-evenly;
+    background-color: aquamarine;
+}
+.thirdgrid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+}
+.thirdgridbox{
+    display: flex;
+    background-color: aqua;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
+}
+.thirdgridbox>img{
+    width: 100px;
+    height: 100px;
+}
+.thirdgridbox>p{
+    font-size: larger;
+    
+}
+.fourth{
+    background-color: lightgrey;
+}
+.forthflex{
+    margin-top: 100px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.forthflex>img{
+    height: 200px;
+    width: 300px;
+}
+.fifth{
+    display: flex;
+    align-items: center;
+    
+}
+.fifth>img{
+    margin-right: 15px;
+    height: 560px;
+    width: 60%;
+}
+.sixth{
+    display: flex;
+    height: 300px;
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    border: 2px solid black;
 
+}
+.fflex{
+    
+    border-right: 1px solid black;
+}
+
+#slide{
+    display: flex;
+    height: 100%;
+    width: 90%;
+    
+    
+}
+#slide>div:nth-child(2){
+    display: flex;
+    align-items: center;
+}
+#slideh2{
+    font-size: smaller;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+#prev,#next{
+    height: 40px;
+    width: 25px;
+    background-color: rgb(21, 189, 122);
+    margin-top: 120px;
+    font-weight:bolder;
+
+}
+
+.sixth img{
+    height: 90%;
+    width: 250px;
+    align-self: center;
+
+}
+.seventh{
+    height: 600px;
+    width: 100%;
+    border: 1px solid rgb(3, 3, 3);
+    background-color: #2e86de;
+    margin-top: 70px;
+    
+    
+}
+.seven1{
+    display: flex;
+    height: 70%;
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+
+    
+}
+.seven2{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.seven2h{
+    border-bottom: 2px solid black;
+}
+.seven2 img{
+    height: 20%;
+    margin-right: 60px;
+    margin-top: 10px;
+}
 
 
 
