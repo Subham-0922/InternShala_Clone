@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses Available</title>
+    <title>LOG In</title>
     <link rel="stylesheet" href="homecss.css">
 </head>
 <body>
@@ -43,7 +43,17 @@
             
         </div>
         <div id="main">
-            <div class="course"></div>
+            <div class="cont">
+                <form >
+                    <label for="">Email </label><br />
+                    <input required id="email" type="text" placeholder="Enter email" /><br />
+                    <label for="">Password </label><br />
+                    <input required id="pass" type="password" placeholder="Enter Password" /><br />
+                    <br>
+                    <input  type="submit"/>
+                  </form>
+        
+            </div>
             <div class="seventh">
                 <div class="seven1">
                     <div class="seven2">
@@ -88,4 +98,32 @@
     
 </body>
 </html>
-<script src="course.js"></script>
+<script>
+    document.querySelector("form").addEventListener("submit",loginw)
+    let details=JSON.parse(localStorage.getItem("signn"))
+    console.log(details[0].email)
+    console.log(details[0].pass)
+    function loginw(event){
+        event.preventDefault()
+        for(let i=0;i<details.length;i++){
+            let em=details[i].email
+            let ps=details[i].pass
+            let emv=document.getElementById("email").value;
+            let psv=document.getElementById("pass").value;
+            if(emv!==em){
+                continue
+            }
+            if(psv==ps){
+                alert("Login Succesfull")
+                window.location.href="home.html"
+                return
+            }else{
+                alert("Wrong Password")
+                return
+            }
+        }
+        alert("Wrong Credentials")
+
+
+    }
+</script>

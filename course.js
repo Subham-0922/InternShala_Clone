@@ -11,6 +11,7 @@ function display(data){
     data.forEach(element => {
         let flag=true
         let div=document.createElement("div")
+        div.setAttribute("class","cbox")
         let title=document.createElement("h2")
         title.innerText=element.Title
         let dist=document.createElement("p")
@@ -26,6 +27,7 @@ function display(data){
         let image=document.createElement("img")
         image.setAttribute("src",element.image)
         butt=document.createElement("button")
+        butt.setAttribute("class","carta")
         butt.innerText="Add To Cart"
         butt.addEventListener("click",function(){
             console.log(flag)
