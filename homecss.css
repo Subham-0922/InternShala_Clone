@@ -304,6 +304,24 @@ body{
     margin-right: 60px;
     margin-top: 10px;
 }
+.course{
+    display: grid;
+    margin-top: 100px;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+}
+.course img{
+    height: 100px;
+    width: 200px;
+}
+
+.cutp{
+    font-style: oblique;
+    color: red;
+}
+.pp{
+    color: green;
+}
 
 
 
