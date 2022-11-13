@@ -31,6 +31,11 @@ body {
     position: fixed;
     z-index: 10;
 }
+.header a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
 
 #main {
     height: 100%;
@@ -78,6 +83,7 @@ body {
     padding: 20px;
 }
 
+
 .sidebaricontoggle {
 
     height: 22px;
@@ -116,11 +122,11 @@ body {
     margin-top: -9px;
 }
 
-.header>img {
-    height: 50px;
-    width: 60px;
+.header>a>img {
+    height: 60px;
+    width: 70px;
     opacity: 100%;
-    margin-left: 40px;
+    margin-left: 60px;
 }
 
 #headtext {
@@ -147,7 +153,7 @@ body {
 
 #cart {
 
-    margin-left: 400px;
+    margin-left: 380px;
 
 }
 
@@ -366,13 +372,7 @@ body {
     grid-gap: 10px;
     text-align: center;
 }
-.out {
-    display: grid;
-    margin-top: 100px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    text-align: center;
-}
+
 
 
 .cbox {
@@ -383,10 +383,7 @@ body {
     height: 100px;
     width: 200px;
 }
-.out img {
-    height: 100px;
-    width: 200px;
-}
+
 
 .cutp {
     font-style: oblique;
