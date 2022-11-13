@@ -66,6 +66,7 @@ body {
 .menu li {
     color: white;
     border-bottom: 1px solid rgba(256, 256, 256, 0.10);
+    cursor: pointer;
 
 }
 
@@ -365,12 +366,24 @@ body {
     grid-gap: 10px;
     text-align: center;
 }
+.out {
+    display: grid;
+    margin-top: 100px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    text-align: center;
+}
+
 
 .cbox {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
 }
 
 .course img {
+    height: 100px;
+    width: 200px;
+}
+.out img {
     height: 100px;
     width: 200px;
 }
