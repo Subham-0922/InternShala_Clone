@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="homecss.css">
+</head>
+
+<body>
+    <div class="cont">
+        <div class="header">
+            <img src="Teamm.png" alt="">
+            <h1 id="headtext">Team Intern</h1>
+            <button id="cart">
+                <img src="https://cdn-icons-png.flaticon.com/128/2169/2169842.png" alt="">
+            </button>
+            <button id="sign">Sign In</button>
+            <button id="log">Sign Up</button>
+        </div>
+        <input type="checkbox" id="opensidebarmenu">
+
+        <label for="opensidebarmenu" class="sidebaricontoggle">
+            <div class="spinner top"></div>
+            <div class="spinner middle"></div>
+            <div class="spinner bottom"></div>
+
+        </label>
+
+        <div id="sidebarmenu">
+
+            <ul class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="course.html">Internship</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Post Internship</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="signup.html">Register</a></li>
+                <li><a href="log_in.html">Log In</a></li>
+                
+            </ul>
+
+        </div>
+        <div id="main">
+            <div class="signupp">
+                <h2>Sign Up Page</h2>
+                <div class="cont">
+                    <form>
+                        <label for="">Full Name</label><br />
+                        <input required id="Name" type="text" placeholder="Enter Name" /><br />
+                        <label for="">Email </label><br />
+                        <input required id="email" type="text" placeholder="Enter email" /><br />
+                        <label for="">Password </label><br />
+                        <input required id="pass" type="password" placeholder="Enter Password" /><br />
+                        <br>
+                        <input type="submit" onclick="link()" />
+                    </form>
+                </div>
+                <div class="seventh">
+                    <div class="seven1">
+                        <div class="seven2">
+                            <img src="https://cdn-icons-png.flaticon.com/128/665/665209.png" alt="">
+                            <img src="https://cdn-icons-png.flaticon.com/128/61/61109.png" alt="">
+                            <img src="https://cdn-icons-png.flaticon.com/128/1384/1384017.png" alt="">
+                            <img src="https://cdn-icons-png.flaticon.com/128/1400/1400829.png" alt="">
+                        </div>
+                        <div class="seven2">
+                            <h2 class="seven2h">BY PLACE</h2>
+                            <h3>Internship In Mumbai</h3>
+                            <h3>Internship In Delhi</h3>
+                            <h3>Internship In Bangalore</h3>
+                            <h3>Internship In Pune</h3>
+                            <h3>Internship In Hyderabad</h3>
+                        </div>
+                        <div class="seven2">
+                            <h2 class="seven2h2">BY PROFILE</h2>
+                            <h3>Marketing Internship</h3>
+                            <h3>Business Devlopment Internship</h3>
+                            <h3>Content Writing Internship</h3>
+                            <h3>Graphic Designing Internship</h3>
+                            <h3>HR Internship</h3>
+                            <h3>Engineering Internship</h3>
+                        </div>
+                        <div class="seven2">
+                            <h2 class="seven2h2">BY TYPE</h2>
+                            <h3>Full Time Internship</h3>
+                            <h3>Part Time Internship</h3>
+                            <h3>Work From Home Internship</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+
+</body>
+
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit", sign)
+    let signar = JSON.parse(localStorage.getItem("signn")) || []
+    function sign(event) {
+        event.preventDefault()
+        let nam = document.querySelector("#Name").value
+        let email = document.querySelector("#email").value
+        let pass = document.querySelector("#pass").value
+        let signobj = {
+            email,
+            pass
+        }
+        signar.push(signobj)
+        localStorage.setItem("signn", JSON.stringify(signar))
+        
+
+    }
+    function link(){
+        window.location.href="log_in.html"
+    }
+    
+</script>

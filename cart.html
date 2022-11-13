@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses Available</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="homecss.css">
 </head>
+
 <body>
     <div class="cont">
         <div class="header">
             <img src="Teamm.png" alt="">
             <h1 id="headtext">Team Intern</h1>
             <button id="cart">
-                <img src="https://cdn-icons-png.flaticon.com/128/2169/2169842.png" alt="">
+                <a href="cart.html"><img src="https://cdn-icons-png.flaticon.com/128/2169/2169842.png" alt=""></a>
             </button>
             <button id="sign">Sign In</button>
             <button id="log">Sign Up</button>
         </div>
         <input type="checkbox" id="opensidebarmenu">
-        
+
         <label for="opensidebarmenu" class="sidebaricontoggle">
             <div class="spinner top"></div>
             <div class="spinner middle"></div>
             <div class="spinner bottom"></div>
-            
+
         </label>
-        
+
         <div id="sidebarmenu">
-            
+
             <ul class="menu">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="course.html">Internship</a></li>
@@ -40,7 +42,7 @@
                 <li><a href="log_in.html">Log In</a></li>
                 
             </ul>
-            
+
         </div>
         <div id="main">
             <div class="course"></div>
@@ -77,15 +79,60 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
-        
-        
-        
-            
-        
+
+
+
+
+
     </div>
-    
+
 </body>
+
 </html>
-<script src="course.js"></script>
+<script>
+    let data = JSON.parse(localStorage.getItem("cart"))
+    display(data)
+    function display(data) {
+        document.querySelector(".course").innerHTML = ""
+        data.forEach(element => {
+            let flag = true
+            let div = document.createElement("div")
+            div.setAttribute("class", "cbox")
+            let title = document.createElement("h2")
+            title.innerText = element.Title
+            let dist = document.createElement("p")
+            dist.innerText = element.Disc
+            let cate = document.createElement("h3")
+            cate.innerText = "Category: " + element.Cate
+            let cutprice = document.createElement("s")
+            cutprice.setAttribute("class", "cutp")
+            cutprice.innerText = "Rs." + Math.floor(element.Price * 1.1)
+            let price = document.createElement("h3")
+            price.setAttribute("class", "pp")
+            price.innerText = "Rs." + element.Price
+            let image = document.createElement("img")
+            image.setAttribute("src", element.image)
+            butt=document.createElement("button")
+            butt.setAttribute("class", "carta")
+            butt.innerText = "Buy Now"
+            butt.addEventListener("click", function () {
+                
+                console.log(flag)
+                if (flag) {
+                    alert("Product Added To Cart")
+                    cart.push(element)
+                    localStorage.setItem("cart", JSON.stringify(cart))
+                    flag = false
+                } else {
+
+                    alert("Product Already in Cart")
+                }
+            })
+            div.append(image, title, dist, cate, cutprice, price, butt)
+            document.querySelector(".course").append(div)
+
+        });
+    }
+</script>
