@@ -12,7 +12,7 @@ Alternatively, you can use a web server to serve the files. For example, you can
 Features
 The Internshala clone includes the following features:
 
-User registration and login
+User registration and login 
 Search internships and apply for them
 Post internships as an employer
 View and manage applications as an employer
